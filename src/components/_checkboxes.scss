@@ -1,0 +1,15 @@
+// $task-colors: (
+// " ": white,
+// "x": green,
+// "!": red,
+// "?": orange,
+// ">": yellow,
+// "-": grey,
+// "*": cyan,
+// );
+
+// @each $char, $color in $task-colors {
+//     [data-task="#{$char}"] {
+//         --checkbox-color: #{$color};
+//     }
+// }

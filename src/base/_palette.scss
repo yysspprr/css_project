@@ -1,0 +1,57 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/settings' as s;
+
+$dark-theme-lightness: (
+    "00": 11%,
+    "05": 13%,
+    "10": 14%,
+    "20": 16%,
+    "25": 18%,
+    "30": 20%,
+    "35": 25%,
+    "40": 33%,
+    "50": 40%,
+    "60": 60%,
+    "70": 70%,
+    "100": 85%,
+);
+
+$light-theme-lightness: (
+    "00": 100%,
+    "05": 99%,
+    "10": 98%,
+    "20": 96%,
+    "25": 94%,
+    "30": 89%,
+    "35": 85%,
+    "40": 74%,
+    "50": 67%,
+    "60": 44%,
+    "70": 36%,
+    "100": 13%,
+);
+
+.theme-dark {
+
+    @each $num, $value in $dark-theme-lightness {
+        --color-base-#{$num}: #{m.accent-tint(calc(var(--accent-s) * s.$tint-strength), $value)};
+    }
+
+    --background-modifier-hover:
+        color-mix(in oklch, var(--color-accent) #{s.$hover-strength-dark}, transparent);
+    
+    --nav-item-background-active:
+        color-mix(in oklch, var(--color-accent) #{s.$nav-select-strength}, transparent);
+
+}
+
+.theme-light {
+
+    @each $num, $value in $light-theme-lightness {
+        --color-base-#{$num}: #{m.accent-tint(calc(var(--accent-s) * s.$tint-strength), $value)};
+    }
+
+    --background-modifier-hover:
+        color-mix(in oklch, var(--color-accent) #{s.$hover-strength-light}, transparent);
+
+}

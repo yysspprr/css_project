@@ -1,0 +1,3 @@
+@function accent-tint($s, $l) {
+    @return hsl(var(--accent-h), $s, $l);
+}
