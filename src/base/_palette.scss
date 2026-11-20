@@ -43,6 +43,13 @@ $light-theme-lightness: (
     --nav-item-background-active:
         color-mix(in oklch, var(--color-accent) #{s.$nav-select-strength}, transparent);
 
+    .nav-file-title.is-active:hover {
+        --nav-item-background-active:
+            color-mix(in oklch, var(--color-accent) #{s.$nav-active-hover}, transparent);
+        --nav-item-background-hover:
+            color-mix(in oklch, var(--color-accent) #{s.$nav-active-hover}, transparent);
+    }
+
 }
 
 .theme-light {
