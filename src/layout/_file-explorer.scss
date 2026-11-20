@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/settings' as s;
+
+.theme-dark {
+    .nav-file-title.is-active:hover {
+        --nav-item-background-active: #{m.accent-wash(s.$nav-active-hover)};
+        --nav-item-background-hover: #{m.accent-wash(s.$nav-active-hover)};
+    }
+}

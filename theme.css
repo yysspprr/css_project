@@ -11,16 +11,8 @@
   --color-base-60: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 60%);
   --color-base-70: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 70%);
   --color-base-100: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 85%);
-  --background-modifier-hover:
-      color-mix(in oklch, var(--color-accent) 20%, transparent);
-  --nav-item-background-active:
-      color-mix(in oklch, var(--color-accent) 40%, transparent);
-}
-.theme-dark .nav-file-title.is-active:hover {
-  --nav-item-background-active:
-      color-mix(in oklch, var(--color-accent) 70%, transparent);
-  --nav-item-background-hover:
-      color-mix(in oklch, var(--color-accent) 70%, transparent);
+  --background-modifier-hover: color-mix(in oklch, var(--color-accent) 20%, transparent);
+  --nav-item-background-active: color-mix(in oklch, var(--color-accent) 40%, transparent);
 }
 
 .theme-light {
@@ -38,4 +30,9 @@
   --color-base-100: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 13%);
   --background-modifier-hover:
       color-mix(in oklch, var(--color-accent) 7%, transparent);
+}
+
+.theme-dark .nav-file-title.is-active:hover {
+  --nav-item-background-active: color-mix(in oklch, var(--color-accent) 70%, transparent);
+  --nav-item-background-hover: color-mix(in oklch, var(--color-accent) 70%, transparent);
 }

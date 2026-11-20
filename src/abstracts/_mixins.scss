@@ -1,3 +1,7 @@
 @function accent-tint($s, $l) {
     @return hsl(var(--accent-h), $s, $l);
 }
+
+@function accent-wash($strength) {
+    @return color-mix(in oklch, var(--color-accent) $strength, transparent);
+}
