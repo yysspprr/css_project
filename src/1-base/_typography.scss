@@ -1,7 +1,12 @@
 @use '../0-abstracts/settings' as s;
 
 body {
-    --font-text-theme: "Liberation Sans", sans-serif;
+    --font-interface-theme: "Noto Sans", sans-serif;
+    --font-text-theme: "Noto Sans", sans-serif;
+    --font-monospace-theme: "Noto Mono", monospace;
 
     --file-line-width: #{s.$line-width};
+
+    --line-height-normal: 1.75;
+    --line-height-tight: 1.3;
 }
