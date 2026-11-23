@@ -1,5 +1,5 @@
-@use '../abstracts/functions' as f;
-@use '../abstracts/settings' as s;
+@use '../0-abstracts/functions' as f;
+@use '../0-abstracts/settings' as s;
 
 .theme-dark {
     .nav-file-title.is-active:hover {

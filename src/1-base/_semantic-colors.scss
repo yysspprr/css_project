@@ -1,0 +1,24 @@
+@use 'sass:color' as c;
+
+$semantic-colors: (
+    "red": #fb464c,
+    "orange": #e9973f,
+    "yellow": #e0de71,
+    "green": #44cf6e,
+    "cyan": #53dfdd,
+    "blue": #027aff,
+    "purple": #a882ff,
+    "pink": #fa99cd,
+);
+
+.theme-dark {
+    
+    @each $color, $hex in $semantic-colors {
+        --color-#{$color}: #{$hex};
+        --color-#{$color}-rgb: #{
+            c.channel($hex, "red", $space: rgb),
+            c.channel($hex, "green", $space: rgb),
+            c.channel($hex, "blue", $space: rgb)
+        };
+    }
+}

@@ -1,19 +1,5 @@
-@use '../abstracts/functions' as f;
-@use '../abstracts/settings' as s;
-
-@use 'sass:color' as c;
-
-$semantic-colors: (
-    "red": #fb464c,
-    "orange": #e9973f,
-    "yellow": #e0de71,
-    "green": #44cf6e,
-    "cyan": #53dfdd,
-    "blue": #027aff,
-    "purple": #a882ff,
-    "pink": #fa99cd,
-);
-
+@use '../0-abstracts/functions' as f;
+@use '../0-abstracts/settings' as s;
 
 $dark-theme-lightness: (
     "00": 11%,
@@ -47,16 +33,6 @@ $light-theme-lightness: (
 
 .theme-dark {
 
-    @each $color, $hex in $semantic-colors {
-    --color-#{$color}: #{$hex};
-    --color-#{$color}-rgb: #{
-        c.channel($hex, "red", $space: rgb),
-        c.channel($hex, "green", $space: rgb),
-        c.channel($hex, "blue", $space: rgb),
-    };
-    }
-
-
     @each $num, $value in $dark-theme-lightness {
         --color-base-#{$num}: #{f.accent-tint(calc(var(--accent-s) * s.$tint-strength), $value)};
     }
@@ -65,8 +41,6 @@ $light-theme-lightness: (
     
     --nav-item-background-active: #{f.accent-wash(s.$nav-select-strength)};
 
-    // --divider-color: ;
-    // --background-modifier-border: green;
 }
 
 .theme-light {
