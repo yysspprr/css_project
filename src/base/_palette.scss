@@ -1,5 +1,19 @@
-@use '../abstracts/mixins' as m;
+@use '../abstracts/functions' as f;
 @use '../abstracts/settings' as s;
+
+@use 'sass:color' as c;
+
+$semantic-colors: (
+    "red": #fb464c,
+    "orange": #e9973f,
+    "yellow": #e0de71,
+    "green": #44cf6e,
+    "cyan": #53dfdd,
+    "blue": #027aff,
+    "purple": #a882ff,
+    "pink": #fa99cd,
+);
+
 
 $dark-theme-lightness: (
     "00": 11%,
@@ -33,23 +47,34 @@ $light-theme-lightness: (
 
 .theme-dark {
 
-    @each $num, $value in $dark-theme-lightness {
-        --color-base-#{$num}: #{m.accent-tint(calc(var(--accent-s) * s.$tint-strength), $value)};
+    @each $color, $hex in $semantic-colors {
+    --color-#{$color}: #{$hex};
+    --color-#{$color}-rgb: #{
+        c.channel($hex, "red", $space: rgb),
+        c.channel($hex, "green", $space: rgb),
+        c.channel($hex, "blue", $space: rgb),
+    };
     }
 
-    --background-modifier-hover: #{m.accent-wash(s.$hover-strength-dark)};
-    
-    --nav-item-background-active: #{m.accent-wash(s.$nav-select-strength)};
 
+    @each $num, $value in $dark-theme-lightness {
+        --color-base-#{$num}: #{f.accent-tint(calc(var(--accent-s) * s.$tint-strength), $value)};
+    }
+
+    --background-modifier-hover: #{f.accent-wash(s.$hover-strength-dark)};
+    
+    --nav-item-background-active: #{f.accent-wash(s.$nav-select-strength)};
+
+    // --divider-color: ;
+    // --background-modifier-border: green;
 }
 
 .theme-light {
 
     @each $num, $value in $light-theme-lightness {
-        --color-base-#{$num}: #{m.accent-tint(calc(var(--accent-s) * s.$tint-strength), $value)};
+        --color-base-#{$num}: #{f.accent-tint(calc(var(--accent-s) * s.$tint-strength), $value)};
     }
 
-    --background-modifier-hover:
-        color-mix(in oklch, var(--color-accent) #{s.$hover-strength-light}, transparent);
+    --background-modifier-hover: #{f.accent-wash(s.$hover-strength-light)};
 
 }
