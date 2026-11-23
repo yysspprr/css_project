@@ -50,7 +50,20 @@
   --color-pink-rgb: 250, 153, 205;
 }
 
+body {
+  --font-text-theme: "Liberation Sans", sans-serif;
+}
+
 .theme-dark .nav-file-title.is-active:hover {
   --nav-item-background-active: color-mix(in oklch, var(--color-accent) 70%, transparent);
   --nav-item-background-hover: color-mix(in oklch, var(--color-accent) 70%, transparent);
+}
+
+body {
+  --h1-size: 3.05em;
+  --h2-size: 2.44em;
+  --h3-size: 1.95em;
+  --h4-size: 1.56em;
+  --h5-size: 1.25em;
+  --h6-size: 1em;
 }

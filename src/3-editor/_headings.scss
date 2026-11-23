@@ -1,0 +1,10 @@
+@use '../0-abstracts/settings' as s;
+@use '../0-abstracts/functions' as f;
+
+@use 'sass:math' as m;
+
+body{
+    @for $i from 1 through 6 {
+        --h#{$i}-size: #{f.round-to(m.pow(s.$heading-ratio, 6 - $i), 2) * 1em};
+    }
+}

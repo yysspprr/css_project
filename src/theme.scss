@@ -1,6 +1,8 @@
 @use '1-base/palette';
 @use '1-base/semantic-colors';
+@use '1-base/typography';
 
 @use '2-layout/file-explorer';
 
-@use '4-components/checkboxes';
+@use '3-editor/checkboxes';
+@use '3-editor/headings'

@@ -1,7 +1,14 @@
+@use 'sass:math' as m;
+
 @function accent-tint($s, $l) {
     @return hsl(var(--accent-h), $s, $l);
 }
 
 @function accent-wash($strength) {
     @return color-mix(in oklch, var(--color-accent) $strength, transparent);
+}
+
+@function round-to($n, $places) {
+    $factor: m.pow(10, $places);
+    @return m.div(m.round($n * $factor), $factor);
 }
