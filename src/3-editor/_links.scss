@@ -2,5 +2,5 @@
 
 .theme-dark {
     --text-accent: hsl(var(--accent-h), var(--accent-s), max(var(--accent-l), #{s.$text-accent-lightness-minimum}));
-    --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(max(var(--accent-l), #{s.$text-accent-lightness-minimum}) +10%));
+    --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(max(var(--accent-l), #{s.$text-accent-lightness-minimum}) + 15%));
 }

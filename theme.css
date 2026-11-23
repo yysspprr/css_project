@@ -75,5 +75,21 @@ body {
 
 .theme-dark {
   --text-accent: hsl(var(--accent-h), var(--accent-s), max(var(--accent-l), 60%));
-  --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(max(var(--accent-l), 60%) +10%));
+  --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(max(var(--accent-l), 60%) + 15%));
+}
+
+.theme-dark {
+  --tag-background: color-mix(in oklch, var(--color-accent) 25%, transparent);
+  --tag-background-hover: color-mix(in oklch, var(--color-accent) 60%, transparent);
+}
+
+body {
+  --tag-radius: .3em;
+  --tag-border-width: 2px;
+  --tag-padding-x: .35em;
+  --tag-padding-y: .35em;
+}
+
+a.tag {
+  font-family: var(--font-monospace-theme);
 }
