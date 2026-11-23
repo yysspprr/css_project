@@ -52,6 +52,7 @@
 
 body {
   --font-text-theme: "Liberation Sans", sans-serif;
+  --file-line-width: 85ch;
 }
 
 .theme-dark .nav-file-title.is-active:hover {

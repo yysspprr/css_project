@@ -4,6 +4,8 @@
 @use 'sass:math' as m;
 
 body{
+
+    // Loop determines heading scale
     @for $i from 1 through 6 {
         --h#{$i}-size: #{f.round-to(m.pow(s.$heading-ratio, 6 - $i), 2) * 1em};
     }

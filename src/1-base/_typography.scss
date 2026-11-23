@@ -1,3 +1,7 @@
+@use '../0-abstracts/settings' as s;
+
 body {
     --font-text-theme: "Liberation Sans", sans-serif;
+
+    --file-line-width: #{s.$line-width};
 }
