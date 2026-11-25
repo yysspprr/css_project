@@ -3,8 +3,11 @@
 @use '1-base/typography';
 
 @use '2-layout/file-explorer';
+@use '2-layout/status-bar';
 
 @use '3-editor/checkboxes';
 @use '3-editor/headings';
 @use '3-editor/links';
 @use '3-editor/tags';
+@use '3-editor/text-formatting';
+@use '3-editor/codeblock';

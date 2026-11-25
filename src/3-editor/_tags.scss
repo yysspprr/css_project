@@ -13,6 +13,6 @@ body {
     --tag-padding-y: .35em;
 }
 
-a.tag {
-    font-family: var(--font-monospace-theme);
+a.tag, .cm-hashtag {
+    font-family: var(--font-monospace);
 }
