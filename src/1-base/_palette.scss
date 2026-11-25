@@ -41,6 +41,8 @@ $light-theme-lightness: (
     
     --nav-item-background-active: #{f.accent-wash(s.$nav-select-strength)};
 
+    --gryphon-frame: color-mix(var(--color-base-00) 90%, var(--mono-0));
+
 }
 
 .theme-light {

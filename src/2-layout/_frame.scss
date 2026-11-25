@@ -1,0 +1,10 @@
+@use '../1-base/palette' as p;
+@use '../0-abstracts/settings' as s;
+
+body {
+    --ribbon-background: var(--gryphon-frame);
+    --titlebar-background: var(--gryphon-frame);
+    --titlebar-background-focused: var(--gryphon-frame);
+
+    padding-right: #{s.$frame-padding-right};
+}

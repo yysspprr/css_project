@@ -13,6 +13,7 @@
   --color-base-100: hsl(var(--accent-h), calc(var(--accent-s) * 0.15), 85%);
   --background-modifier-hover: color-mix(in oklch, var(--color-accent) 20%, transparent);
   --nav-item-background-active: color-mix(in oklch, var(--color-accent) 40%, transparent);
+  --gryphon-frame: color-mix(var(--color-base-00) 90%, var(--mono-0));
 }
 
 .theme-light {
@@ -70,6 +71,13 @@ body {
   --status-bar-border-width: 2px 0 0 0;
   --status-bar-radius: 0;
   --status-bar-position: relative;
+}
+
+body {
+  --ribbon-background: var(--gryphon-frame);
+  --titlebar-background: var(--gryphon-frame);
+  --titlebar-background-focused: var(--gryphon-frame);
+  padding-right: var(--ribbon-width);
 }
 
 body {
